@@ -4,6 +4,7 @@ import { HomeWeatherComponent } from 'src/home/feature/home-weather/home-weather
 import { FavoritesComponent } from 'src/favorites/favorites/favorites.component';
 
 const routes: Routes = [
+  { path: '', component: HomeWeatherComponent },
   { path: 'home', component: HomeWeatherComponent },
   { path: 'favorites', component: FavoritesComponent }
 ];
