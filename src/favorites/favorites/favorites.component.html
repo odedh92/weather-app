@@ -1,0 +1,27 @@
+<div class="AllPage">
+    <h2 id="fevoritesTitle">Favorites</h2>
+    <div class="mainView"> 
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">City name</th>
+            <th scope="col">Current Weather</th>
+            <th scope="col">Show Full 5 day forecast</th>
+            <th scope="col">Remove from Favorites</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let f of localStore.favorites; index as i" (attr.data-index)="i">
+            <th scope="row">{{f.Key}}</th>
+            <td>{{f.LocalizedName}}</td>
+            <td *ngIf ="favoriteCurrentWeather[i] as favoriteCurrentWeather">
+                {{favoriteCurrentWeather.WeatherText}} , {{favoriteCurrentWeather.Temperature.Metric.Value}}
+               °C</td>
+            <td><button (click)="viewcityweather(f)">View</button></td>   
+            <td><button (click)="removeFavorite(f,i)">Remove</button></td>
+          </tr>     
+        </tbody>
+      </table>
+    </div>
+</div>

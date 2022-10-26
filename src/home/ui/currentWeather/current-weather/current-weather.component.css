@@ -1,0 +1,23 @@
+.cardCont{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5%;
+}
+.cardDetails{
+    display: flex;
+    flex-direction: column;
+}
+.cardImg{
+padding-top: 40px;
+padding-left: 20px;
+}
+.favBtn{
+    height: 1%;
+    color:  #79BAEC;
+    background-color: inherit;
+}
+.cardDetails div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

@@ -1,0 +1,21 @@
+<div class="cardCont"> 
+<div class="card border-info mb-3" style="max-width: 540px;">
+    <div class="row g-0"  *ngIf="weatherService.currentWeather as currentWeather">
+      <div class="col-md-4">
+        <img src="{{weatherService.createIconURL(currentWeather.WeatherIcon)}}" class="cardImg" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body" *ngIf="weatherService.viewingCity as city">
+          <h5 class="card-title">{{city.LocalizedName}}</h5>
+          <span class="card-text">{{currentWeather.Temperature.Imperial.Value + ' °C'}}</span>
+          <p class="card-text"><small class="text-muted"></small>{{currentWeather.WeatherText}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button pButton icon="pi pi-star" class="favBtn" (click)="toggleFavorites(weatherService.viewingCity)"></button>
+</div>
+
+
+
+<!-- <i class="bi bi-star-fill"></i>    // Fill star - is favorite -->

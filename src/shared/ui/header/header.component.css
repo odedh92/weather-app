@@ -1,0 +1,23 @@
+/* .menuBar {
+  width: 100%;
+  display: flex;
+  background-color: #85b2f9;
+  justify-content: space-between;
+
+  margin-bottom: 1px;
+}
+
+h1 {
+  font-family: 'Helvetica';
+  padding-left: 2%;
+  color: #F3F3F3;
+}
+
+.routes {
+  width: 8%;
+  padding-top: 1%;
+  display: flex;
+  justify-content: space-between;
+} */
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";

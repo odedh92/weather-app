@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.weatherIcon {
+    max-width: 50px;
+}
