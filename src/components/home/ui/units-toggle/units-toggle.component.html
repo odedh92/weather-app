@@ -1,0 +1,7 @@
+<div class="unitToggle" > 
+    <span class="unitSpan">Choose Units: °{{localStore.isMetric ? "C" : "F"}}</span>
+    <p-inputSwitch 
+    [(ngModel)]="!localStore.isMetric" 
+    (onChange)="localStore.toggleTemperatureUnits()"
+    ></p-inputSwitch>
+    </div>

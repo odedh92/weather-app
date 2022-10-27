@@ -1,0 +1,13 @@
+#forecastTitle{
+    text-align: center;
+    color: black;
+    margin-inline: auto;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailsstack {
+    min-height: 75px;
+}

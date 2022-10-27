@@ -1,0 +1,27 @@
+<div class="column">
+  <h2 id="forecastTitle">5 day Forecast</h2>
+  <div *ngIf="weatherService.fiveDayWeather as fiveDayForecast" class="row row-cols-1 row-cols-md-5 g-2">
+    <div *ngFor="let dayWeatherForecast of fiveDayForecast.DailyForecasts" class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{dayFromDate(dayWeatherForecast.Date)}}</h5>
+          <div class="column detailsstack">
+            <small>Daytime: {{dayWeatherForecast.Day.IconPhrase}}</small>
+            <img src="{{weatherService.createIconURL(dayWeatherForecast.Day.Icon)}}" class="weatherIcon" />
+          </div>
+          <div class="column detailsstack">
+            <small>Nightime: {{dayWeatherForecast.Night.IconPhrase}}</small>
+            <img src="{{weatherService.createIconURL(dayWeatherForecast.Night.Icon)}}" class="weatherIcon" />
+          </div>
+          <hr>
+          <span>
+            <small>Min: {{weatherService.convertTemperature(dayWeatherForecast.Temperature.Minimum.Value,false)}} Max:
+              {{weatherService.convertTemperature(dayWeatherForecast.Temperature.Maximum.Value,false)}} </small>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

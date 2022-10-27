@@ -4,10 +4,9 @@
 
 export const environment = {
   production: false,
-  weather_api_key:"h8sYS6Gzxtz66Ke4uFunyutBARm5SYKn"
+  weather_api_key:"b0IptatFJ6inAM0F77bRhkfP9x2mTqYt"
 };
 
-// 6bHH1yUhx5KqF99yUjg6wXcVaS2ILIld
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

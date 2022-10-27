@@ -1,0 +1,13 @@
+<div class="searchAndUnit">
+  <app-units-toggle></app-units-toggle>
+  <div class="input-group-append">
+    <i class="bi bi-search"></i>
+    <input type="text" class="form-control" id="search" placeholder="Search by city"
+      (input)="onCitySearch(search.value)" #search>
+    <div class="city-list-drop-down" *ngIf="relevantCitiesSubject as cities">
+      <div *ngFor="let city of cities">
+        <div (click)="onSelectCity(city)">{{city.LocalizedName}}</div>
+      </div>
+    </div>
+  </div>
+</div>
